@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Appraisal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Performance Appraisal</h1>
+        <p>Penilaian berdasarkan Core Values, Soft Competency, Technical Competency, dan KPI.</p>
+      </header>
+
+      <section class="card">
+        <h2>Data Karyawan</h2>
+        <div class="grid two-col">
+          <label>
+            Nama Karyawan
+            <input id="employeeName" type="text" placeholder="Contoh: Budi Santoso" />
+          </label>
+          <label>
+            Periode
+            <input id="period" type="month" />
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Skor Penilaian</h2>
+        <p class="hint">Masukkan skor 1-5 untuk tiap aspek. Bobot total = 100%.</p>
+        <div class="grid score-grid">
+          <label>
+            Core Values (20%)
+            <input id="coreValues" type="number" min="1" max="5" step="0.1" value="4" />
+          </label>
+          <label>
+            Soft Competency (25%)
+            <input id="softCompetency" type="number" min="1" max="5" step="0.1" value="4" />
+          </label>
+          <label>
+            Technical Competency (25%)
+            <input id="technicalCompetency" type="number" min="1" max="5" step="0.1" value="4" />
+          </label>
+          <label>
+            KPI (30%)
+            <input id="kpi" type="number" min="1" max="5" step="0.1" value="4" />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="calculateBtn">Hitung Nilai</button>
+          <button id="saveBtn" class="secondary">Simpan Hasil</button>
+          <button id="resetBtn" class="danger">Reset</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Hasil Appraisal</h2>
+        <div id="result" class="result empty">Belum ada perhitungan.</div>
+      </section>
+
+      <section class="card">
+        <h2>Riwayat Penilaian</h2>
+        <div id="history" class="history empty">Belum ada data tersimpan.</div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
